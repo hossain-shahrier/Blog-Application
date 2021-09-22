@@ -5,8 +5,9 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import tw from "twin.macro";
 const Container = styled.div`
-  flex: 3;
+  flex: 3.5;
   ${tw`
+      h-full
       m-5
       pb-8
       bg-gray-100
