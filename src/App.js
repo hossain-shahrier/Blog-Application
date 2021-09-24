@@ -1,11 +1,16 @@
 // import Home from "./pages/homepage";
-import PostPage from "./pages/postpage";
-import { BrowserRoute as Route, Link, Router } from "react-router-dom";
+// import PostPage from "./pages/postpage";
+
+import Settings from "./pages/settings";
+import WritingPage from "./pages/writingpage";
+
 function App() {
   return (
     <div className="App">
       {/* <Home /> */}
-      <PostPage />
+      {/* <PostPage /> */}
+      {/* <WritingPage /> */}
+      <Settings />
     </div>
   );
 }

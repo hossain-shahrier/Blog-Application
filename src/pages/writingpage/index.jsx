@@ -1,12 +1,13 @@
-import styled from "styled-components";
+import FormComponent from "../../components/form";
+import Navbar from "../../components/navbar";
 
-const Container = styled.div``
 const WritingPage = () => {
-    return (
-        <Container>
-            
-        </Container>
-    )
-}
+  return (
+    <>
+      <Navbar />
+      <FormComponent />
+    </>
+  );
+};
 
-export default WritingPage
+export default WritingPage;
