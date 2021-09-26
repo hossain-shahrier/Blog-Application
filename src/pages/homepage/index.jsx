@@ -1,7 +1,6 @@
 import Header from "../../components/header";
-import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
-import Posts from "../../components/posts/idnex";
+import Posts from "../../components/posts";
 
 import styled from "styled-components";
 import tw from "twin.macro";
@@ -14,7 +13,6 @@ flex
 const Home = () => {
   return (
     <>
-      <Navbar />
       <Header />
       <Container>
         <Posts />
