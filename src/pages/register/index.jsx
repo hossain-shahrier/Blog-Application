@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import tw from "twin.macro";
 const Container = styled.div`
@@ -71,7 +72,9 @@ const Register = () => {
         <InputLabel>Password</InputLabel>
         <Input type="password" placeholder="Enter your password" />
         <RegisterButton>Register</RegisterButton>
-        <LoginButton>Login</LoginButton>
+        <NavLink to="/login">
+          <LoginButton>Login</LoginButton>
+        </NavLink>
       </RegisterForm>
     </Container>
   );

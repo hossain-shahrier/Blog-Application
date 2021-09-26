@@ -61,7 +61,7 @@ const TopImage = styled.img`
   `}
 `;
 const Navbar = () => {
-  const user = true;
+  const user = false;
   return (
     <Container>
       <NavLeft>
