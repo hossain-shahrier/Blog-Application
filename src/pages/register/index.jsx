@@ -6,7 +6,7 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.3),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.unsplash.com/photo-1573848953384-3be02021eb0b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80");
+    url("https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80");
   background-size: cover;
   ${tw`
     flex
@@ -15,10 +15,10 @@ const Container = styled.div`
     items-center
 `}
 `;
-const LoginTitle = styled.span`
+const RegisterTitle = styled.span`
   font-size: 50px;
 `;
-const LoginForm = styled.form`
+const RegisterForm = styled.form`
   ${tw`
     mt-5
     flex
@@ -37,7 +37,7 @@ const Input = styled.input`
     bg-white
 `}
 `;
-const LoginButton = styled.button`
+const RegisterButton = styled.button`
   ${tw`
     mt-5
     cursor-pointer
@@ -47,7 +47,7 @@ const LoginButton = styled.button`
     p-2.5
 `}
 `;
-const RegistrationButton = styled.button`
+const LoginButton = styled.button`
   top: 80px;
   right: 20px;
   ${tw`
@@ -59,20 +59,22 @@ const RegistrationButton = styled.button`
     rounded-xl
 `}
 `;
-const LogIn = () => {
+const Register = () => {
   return (
     <Container>
-      <LoginTitle>Login</LoginTitle>
-      <LoginForm>
+      <RegisterTitle>Register</RegisterTitle>
+      <RegisterForm>
+        <InputLabel>Username</InputLabel>
+        <Input type="text" placeholder="Enter your name" />
         <InputLabel>Email</InputLabel>
         <Input type="email" placeholder="Enter your email" />
         <InputLabel>Password</InputLabel>
         <Input type="password" placeholder="Enter your password" />
+        <RegisterButton>Register</RegisterButton>
         <LoginButton>Login</LoginButton>
-        <RegistrationButton>Register</RegistrationButton>
-      </LoginForm>
+      </RegisterForm>
     </Container>
   );
 };
 
-export default LogIn;
+export default Register;

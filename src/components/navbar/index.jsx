@@ -6,6 +6,7 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import SearchIcon from "@mui/icons-material/Search";
 import LogoutIcon from "@mui/icons-material/Logout";
+import { NavLink } from "react-router-dom";
 const Container = styled.div`
   z-index: 1;
   ${tw`
@@ -60,6 +61,7 @@ const TopImage = styled.img`
   `}
 `;
 const Navbar = () => {
+  const user = true;
   return (
     <Container>
       <NavLeft>
@@ -70,20 +72,43 @@ const Navbar = () => {
       </NavLeft>
       <NavCenter>
         <TopList>
-          <TopListItem>Home</TopListItem>
-          <TopListItem>About</TopListItem>
-          <TopListItem>Contact</TopListItem>
-          <TopListItem>Write</TopListItem>
-          <TopListItem>Blogs</TopListItem>
+          <NavLink to="/">
+            <TopListItem>Home</TopListItem>
+          </NavLink>
+          {/* <NavLink to="/about">
+            <TopListItem>About</TopListItem>
+          </NavLink>
+          <NavLink to="/">
+            <TopListItem>Contact</TopListItem>
+          </NavLink> */}
+          <NavLink to="/write">
+            <TopListItem>Write</TopListItem>
+          </NavLink>
+          <NavLink to="/">
+            <TopListItem>Blogs</TopListItem>
+          </NavLink>
         </TopList>
       </NavCenter>
       <NavRight>
-        <TopImage
-          src="https://avatars.githubusercontent.com/u/65191217?s=60&v=4"
-          style={{ marginRight: "10px", cursor: "pointer" }}
-        />
+        {user ? (
+          <TopImage
+            src="https://avatars.githubusercontent.com/u/65191217?s=60&v=4"
+            style={{ marginRight: "10px", cursor: "pointer" }}
+          />
+        ) : (
+          <>
+            <TopList>
+              <NavLink to="/login">
+                <TopListItem>Login</TopListItem>
+              </NavLink>
+              <NavLink to="/register">
+                <TopListItem>Register</TopListItem>
+              </NavLink>
+            </TopList>
+          </>
+        )}
         <SearchIcon style={{ marginRight: "10px", cursor: "pointer" }} />
-        <LogoutIcon />
+        {user && <LogoutIcon />}
       </NavRight>
     </Container>
   );
